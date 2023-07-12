@@ -1,7 +1,16 @@
 <div class="post-card">
-  <div class="post-content">
+  <div>
     <h5>{{ post?.title }}</h5>
-    <p>{{ post?.description }}</p>
+    <p [ngClass]="post?.description?.length! > 280 ? 'line-clamp' : ''">
+      {{ post?.description }}
+    </p>
+    <button
+      *ngIf="post?.description?.length! > 280"
+      (click)="navigateToPost(post?.id!)"
+      class="btn small"
+    >
+      Read More
+    </button>
   </div>
   <div class="post-user">
     <img src="assets/images/profile.png" alt="User Avatar" />

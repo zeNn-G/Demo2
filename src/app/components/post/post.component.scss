@@ -4,6 +4,14 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 
+  .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .post-user {
     display: flex;
     margin-top: 1.5rem;

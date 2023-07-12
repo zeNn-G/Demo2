@@ -27,3 +27,22 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+  color: var(--primary-text);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--primary-dark);
+  }
+
+  &.small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}

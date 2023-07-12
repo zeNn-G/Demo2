@@ -8,6 +8,11 @@ import { Post } from './../../types/types';
 })
 export class PostComponent {
   @Input() post: Post | undefined;
+  expandDescription: boolean = false;
 
   constructor() {}
+
+  navigateToPost(postId: number) {
+    console.log('navigateToPost', postId);
+  }
 }
