@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts/posts.component';
-import { PostComponent } from './posts/post/post.component';
+import { PostComponent } from './components/post/post.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
 import { HomeComponent } from './home/home.component';

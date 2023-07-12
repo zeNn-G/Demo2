@@ -1,0 +1,15 @@
+<div class="post-card">
+  <div class="post-content">
+    <h5>{{ post?.title }}</h5>
+    <p>{{ post?.description }}</p>
+  </div>
+  <div class="post-user">
+    <img src="assets/images/profile.png" alt="User Avatar" />
+    <div>
+      <h5>
+        Written by <span class="author">{{ post?.author }}</span>
+      </h5>
+      <p>{{ post?.date | date }}</p>
+    </div>
+  </div>
+</div>
