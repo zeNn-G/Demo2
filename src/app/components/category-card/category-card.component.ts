@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Category } from 'src/app/types/types';
 
 @Component({
@@ -9,4 +8,6 @@ import { Category } from 'src/app/types/types';
 })
 export class CategoryCardComponent {
   @Input() category: Category | undefined;
+
+  constructor() {}
 }

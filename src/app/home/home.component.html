@@ -1,1 +1,8 @@
-<p>home works!</p>
+<section>
+  <div class="grid">
+    <app-category-card
+      *ngFor="let category of categories"
+      [category]="category"
+    ></app-category-card>
+  </div>
+</section>
