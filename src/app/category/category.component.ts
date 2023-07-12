@@ -1,5 +1,18 @@
+import { PostsService } from './../posts.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Post } from '../types/types';
+
+enum Category {
+  'Getting Started' = 1,
+  'User Account',
+  'Product Features',
+  'Customization Options',
+  'Payment Gateways',
+  'Security Options',
+  'Digital Downloads',
+  'Email Marketing',
+}
 
 @Component({
   selector: 'app-category',
@@ -7,12 +20,21 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./category.component.scss'],
 })
 export class CategoryComponent implements OnInit {
+  posts: Post[] = [];
   categoryName: string = '';
-  constructor(private route: ActivatedRoute) {}
+  categoryId: number | null = null;
+
+  constructor(
+    private route: ActivatedRoute,
+    private postsService: PostsService
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.categoryName = params['name'];
+      this.categoryId = Category[this.categoryName as keyof typeof Category];
     });
+
+    this.posts = this.postsService.getPosts(this.categoryId!);
   }
 }
