@@ -8,6 +8,7 @@ import { PostComponent } from './posts/post/post.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
 import { HomeComponent } from './home/home.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     CategoryCardComponent,
     HomeComponent,
+    CategoryComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
