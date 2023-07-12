@@ -10,7 +10,7 @@ export class PostsService {
   constructor() {}
 
   getPosts(categoryId: number) {
-    return this.posts.filter((post) => post.category_id === categoryId);
+    return this.posts.filter((post) => post.category_id === categoryId).slice();
   }
 
   getPost(postId: number) {

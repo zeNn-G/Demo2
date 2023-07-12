@@ -1,0 +1,57 @@
+section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  padding: 1rem 0;
+
+  a {
+    color: var(--primary-light);
+
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  }
+}
+
+.post-card {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+
+  .line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .post-user {
+    display: flex;
+    margin-top: 1.5rem;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h5 {
+        font-size: 0.9rem;
+        color: gray;
+        font-weight: 500;
+      }
+
+      .author {
+        font-size: 0.85rem;
+        color: #000;
+        font-weight: 700;
+      }
+    }
+  }
+}

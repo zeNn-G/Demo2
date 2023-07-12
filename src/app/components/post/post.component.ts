@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Post } from './../../types/types';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post',
@@ -10,9 +11,9 @@ export class PostComponent {
   @Input() post: Post | undefined;
   expandDescription: boolean = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   navigateToPost(postId: number) {
-    console.log('navigateToPost', postId);
+    this.router.navigate(['posts', postId]);
   }
 }

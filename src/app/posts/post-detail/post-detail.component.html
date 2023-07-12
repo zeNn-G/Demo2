@@ -1,0 +1,18 @@
+<section>
+  <a routerLink="/">Home Page</a>
+</section>
+
+<div class="post-card">
+  <div>
+    <h5>{{ postDetail?.title }}</h5>
+    <p>{{ postDetail?.description }}</p>
+  </div>
+  <div class="post-user">
+    <div>
+      <h5>
+        Written by <span class="author">{{ postDetail?.author }}</span>
+      </h5>
+      <p>{{ postDetail?.date | date }}</p>
+    </div>
+  </div>
+</div>
