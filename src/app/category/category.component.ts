@@ -2,6 +2,8 @@ import { PostsService } from './../posts.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from '../types/types';
+import { CategoriesService } from '../categories.service';
+import { Category as CategoryType } from '../types/types';
 
 enum Category {
   'Getting Started' = 1,
@@ -23,10 +25,12 @@ export class CategoryComponent implements OnInit {
   posts: Post[] = [];
   categoryName: string = '';
   categoryId: number | null = null;
+  categoryDetails: CategoryType | undefined;
 
   constructor(
     private route: ActivatedRoute,
-    private postsService: PostsService
+    private postsService: PostsService,
+    private categoriesService: CategoriesService
   ) {}
 
   ngOnInit(): void {
@@ -36,5 +40,8 @@ export class CategoryComponent implements OnInit {
     });
 
     this.posts = this.postsService.getPosts(this.categoryId!);
+    this.categoryDetails = this.categoriesService.getCategory(
+      this.categoryName
+    );
   }
 }

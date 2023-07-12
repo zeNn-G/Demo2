@@ -1,1 +1,15 @@
-<app-breadcrumbs [categoryName]="categoryName"></app-breadcrumbs>
+<section>
+  <app-breadcrumbs [categoryName]="categoryName"></app-breadcrumbs>
+
+  <div class="category-section">
+    <img [src]="'assets/' + categoryDetails?.icon" class="icon" />
+    <div class="category-content">
+      <h3>
+        {{ categoryDetails?.name }} <span>({{ posts.length }})</span>
+      </h3>
+      <span>
+        {{ categoryDetails?.description }}
+      </span>
+    </div>
+  </div>
+</section>
