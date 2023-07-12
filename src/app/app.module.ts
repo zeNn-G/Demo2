@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
 import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CategoryComponent } from './category/category.component';
     CategoryCardComponent,
     HomeComponent,
     CategoryComponent,
+    BreadcrumbsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

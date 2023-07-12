@@ -1,0 +1,21 @@
+section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  padding: 1rem 0;
+  gap: 0.25rem;
+
+  a {
+    color: var(--primary-light);
+
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  }
+}
