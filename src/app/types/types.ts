@@ -12,4 +12,5 @@ export interface Post {
   description: string;
   date: string;
   author: string;
+  tags?: string[];
 }

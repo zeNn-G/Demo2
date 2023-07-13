@@ -3,16 +3,16 @@
 </section>
 
 <div class="post-card">
-  <div>
-    <h5>{{ postDetail?.title }}</h5>
-    <p>{{ postDetail?.description }}</p>
+  <div class="post-body">
+    <h5 class="post-title">{{ postDetail?.title }}</h5>
+    <p class="post-description">{{ postDetail?.description }}</p>
   </div>
   <div class="post-user">
-    <div>
-      <h5>
-        Written by <span class="author">{{ postDetail?.author }}</span>
-      </h5>
-      <p>{{ postDetail?.date | date }}</p>
-    </div>
+    <span class="author">{{ postDetail?.author }}</span>
+    <p class="date">{{ postDetail?.date | date : "dd MMMM yyyy" }}</p>
+  </div>
+  <div class="tags">
+    <span *ngIf="postDetail?.tags?.length! > 0">Tags: </span>
+    <span *ngFor="let tag of postDetail?.tags" class="tag">{{ tag }}</span>
   </div>
 </div>

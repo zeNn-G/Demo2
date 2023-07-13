@@ -25,33 +25,42 @@ section {
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 
-  .line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Number of lines to show */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .post-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .post-body {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
   }
 
   .post-user {
     display: flex;
+    align-items: center;
+    gap: 0.25rem;
     margin-top: 1.5rem;
+    color: var(--primary-light);
 
-    div {
-      display: flex;
-      flex-direction: column;
+    .author {
+      padding: 0.25rem 0.5rem;
+      background-color: var(--primary-light);
+      color: var(--primary-text);
+    }
+  }
 
-      h5 {
-        font-size: 0.9rem;
-        color: gray;
-        font-weight: 500;
-      }
+  .tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
 
-      .author {
-        font-size: 0.85rem;
-        color: #000;
-        font-weight: 700;
-      }
+    .tag {
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      background-color: var(--grey-100);
     }
   }
 }
