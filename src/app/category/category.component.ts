@@ -39,7 +39,10 @@ export class CategoryComponent implements OnInit {
       this.categoryId = Category[this.categoryName as keyof typeof Category];
     });
 
-    this.posts = this.postsService.getPosts(this.categoryId!);
+    this.posts = this.postsService.getPosts(this.categoryId!).sort((a, b) => {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    });
+
     this.categoryDetails = this.categoriesService.getCategory(
       this.categoryName
     );
