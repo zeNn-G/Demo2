@@ -42,8 +42,6 @@ export class PostsService {
       };
     });
 
-    console.log(results);
-
     //Sorting by date
     const sortedDateResults = results.sort((a, b) => {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
