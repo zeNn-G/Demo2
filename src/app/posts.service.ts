@@ -47,11 +47,6 @@ export class PostsService {
       return new Date(b.date).getTime() - new Date(a.date).getTime();
     });
 
-    //Sorting by score less is better
-    const sortedByScore = sortedDateResults.sort((a, b) => {
-      return a.score! - b.score!;
-    });
-
-    return sortedByScore;
+    return sortedDateResults;
   }
 }
