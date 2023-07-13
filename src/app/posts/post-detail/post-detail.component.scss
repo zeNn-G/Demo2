@@ -62,5 +62,9 @@ section {
       border-radius: 0.25rem;
       background-color: var(--grey-100);
     }
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
   }
 }
