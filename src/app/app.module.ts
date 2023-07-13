@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CategoryComponent } from './category/category.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { PostDetailComponent } from './posts/post-detail/post-detail.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,9 @@ import { PostDetailComponent } from './posts/post-detail/post-detail.component';
     CategoryComponent,
     BreadcrumbsComponent,
     PostDetailComponent,
+    SearchComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,9 +1,19 @@
 <section>
-  <div class="search-container">
+  <form
+    class="search-container"
+    [formGroup]="searchForm"
+    (ngSubmit)="onSubmit()"
+  >
     <h1>How can we help you?</h1>
     <div class="search">
-      <img src="assets/search.svg" alt="" />
-      <input type="text" placeholder="Search for answers" />
+      <img src="assets/search.svg" alt="Search Icon" />
+      <input
+        type="text"
+        placeholder="Search for answers"
+        name="searchQuery"
+        formControlName="searchQuery"
+        autocomplete="off"
+      />
     </div>
-  </div>
+  </form>
 </section>
